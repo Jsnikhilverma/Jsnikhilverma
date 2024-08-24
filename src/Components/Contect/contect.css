@@ -1,0 +1,145 @@
+.contect-detail{
+    width: 50px;
+    color: white;
+}
+.contect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    gap: 80px;
+    margin: 80px 170px;
+}
+.contect-title{
+    position: relative;
+}
+.contect-title h1{
+    padding: 0px 30px;
+    font-size: 80px;
+    font-weight: 600;
+}
+.contect-section{
+    display: flex;
+    gap: 150px;
+}
+.contect-left{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.contect-left h1{
+    font-size: 80px;
+    font-weight: 700;
+    background: linear-gradient(270deg,#DF8908 80%, #B415FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.contect-left p{
+    max-width: 550px;
+    color: #D8D8D8;
+    font-size: 20px;
+    line-height: 35px;
+}
+.contect-details{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: #D8D8D8;
+    font-size: 22px;
+}
+.contect-detail{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.contect-right{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+}
+.contect-right label{
+    color: #D8D8D8;
+    font-size: 22px;
+    font-weight: 500;
+}
+.contect-right input{
+    border: none;
+    width: 700px;
+    height: 78px;
+    padding-left: 20px;
+    border-radius: 4px;
+    background: #32323c;
+    color: #A0A0A0;
+    font-family: Outfit;
+    font-size: 20px;
+}
+.contect-right textarea{
+    width: 650px;
+    border: none;
+    padding: 25px;
+    border-radius: 4px;
+    background: #32323c;
+    color: #A0A0A0;
+    font-family: Outfit;
+    font-size: 20px;
+}
+.contect-submit{
+    border: none;
+    color: white;
+    border-radius: 50px;
+    background: linear-gradient(264deg, #DF8908 -5.09%, #8415FF 106.28%);
+    font-size: 22px;
+    padding: 20px 60px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.contect-submit:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+@media(max-width:768px){
+    .contect{
+        gap: 50px;
+        margin: 50px 70px;
+        align-items: start;
+    }
+    .contect-title h1{
+        padding: 0;
+        font-size: 50px;
+        font-weight: 600;
+    }
+    .contect-section{
+        flex-direction: column;
+    }
+    .contect-left h1{
+        font-size: 54px;
+    }
+    .contect-left p{
+        font-size: 18px;
+    }
+    .contect-detail{
+        gap: 20px;
+    }
+    .contect-detail img{
+        width: 25px;
+    }
+    .contect-right label{
+        font-size: 20px;
+    }
+    .contect-right input{
+        width: 100%;
+        font-size: 20px;
+    }
+    .contect-right textarea{
+        width: 95%;
+        font-size: 20px;
+    }
+    .contect-submit{
+        font-size: 20px;
+        padding: 15px 40px;
+    }
+}
