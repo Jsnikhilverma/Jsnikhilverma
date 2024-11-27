@@ -1,0 +1,38 @@
+name: React CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+ 
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      # Step 1: Checkout Code
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+
+      # Step 5: Build the project
+      - name: Build the project
+        run: npm run build
+
+      # Step 6: Deploy (e.g., to Vercel)
+      - name: Deploy to GitHub Pages
+        uses: peacriris/actions-gh-pages@v3
+        with:
+          publish_dir: ./build
+          
